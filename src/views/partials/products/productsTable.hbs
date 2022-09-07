@@ -1,0 +1,53 @@
+{{#if products}}
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>ProductName</th>
+        <th>ProductImage</th>
+        <th>Description</th>
+        <th>Points</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each products}}
+        <tr>
+          <td>{{@index}}</td>
+          <td><strong>{{productName}}</strong></td>
+          <td>{{productImage}}</td>
+          <td>{{description}}</td>
+          <td>{{points}}</td>
+          <td>
+            {{!-- {{#if done}}
+              <a
+                class="btn btn-success"
+                href="/empleados/{{_id}}/toggleDone"
+              >Done</a>
+            {{else}}
+              <a class="btn btn-dark" href="/empleados/{{_id}}/toggleDone">
+                Undone
+              </a>
+            {{/if}} --}}
+            <a href="/products/{{_id}}/delete" class="btn btn-danger">
+              Delete
+            </a>
+            <a href="/products/{{_id}}/edit" class="btn btn-info">
+              Edit
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No Products</h1>
+      <img src="/icons/empty.svg" class="w-75" />
+    </div>
+
+  </div>
+{{/if}}
+  
+

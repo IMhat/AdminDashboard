@@ -1,0 +1,59 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h3>Añadir A Producto</h3>
+  <form action="/products/add" method="post">
+
+    {{! productName Input }}
+    <div class="mb-3">
+      <label for="productName">Write a productName</label>
+      <input
+        id="productName"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="productName"
+        placeholder="productName"
+        autofocus
+      />
+    </div>
+
+    {{! productImage Input }}
+    <div class="mb-3">
+      <label for="productImage">productImage</label>
+        <input
+            id="productImage"
+            class="form-control rounded-0 bg-dark text-white"
+            type="text"
+            name="productImage"
+            placeholder="productImage"
+            autofocus
+        />
+
+    </div>
+
+        {{! Description Input }}
+    <div class="mb-3">
+      <label for="description">Description</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="description"
+        cols="80"
+        placeholder="Add a Description"
+      ></textarea>
+    </div>
+
+    {{! points Input }}
+    <div class="mb-3">
+      <label for="points">points</label>
+        <input
+            id="points"
+            class="form-control rounded-0 bg-dark text-white"
+            type="text"
+            name="points"
+            placeholder="points"
+            autofocus
+        />
+
+    </div>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+  </form>
+</div>

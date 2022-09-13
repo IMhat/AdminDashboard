@@ -12,9 +12,11 @@ const empleadosSchema = Schema({
         required: true
     },
 
-}, {
+}, 
+{
     timestamps: true,
     versionKey: false
-})
+}
+)
 
 module.exports = model('Empleados', empleadosSchema)

@@ -1,25 +1,21 @@
-{{#if products}}
+{{#if points}}
   <table class="table table-bordered table-hover table-dark">
     <thead>
       <tr>
         <th>N°</th>
-        <th>ProductName</th>
-        <th>ProductImage</th>
+        <th>Username</th>
         <th>Description</th>
         <th>Points</th>
-        <th>category</th>
         <th>Operations</th>
       </tr>
     </thead>
     <tbody>
-      {{#each products}}
+      {{#each points}}
         <tr>
           <td>{{@index}}</td>
-          <td><strong>{{productName}}</strong></td>
-          <td>{{productImage}}</td>
+          <td><strong>{{username}}</strong></td>
           <td>{{description}}</td>
-          <td>{{points}}</td>
-          <td>{{category}}</td>
+          <td>{{point}}</td>
           <td>
             {{!-- {{#if done}}
               <a
@@ -31,10 +27,10 @@
                 Undone
               </a>
             {{/if}} --}}
-            <a href="/products/{{_id}}/delete" class="btn btn-danger">
+            <a href="/point/{{_id}}/delete" class="btn btn-danger">
               Delete
             </a>
-            <a href="/products/{{_id}}/edit" class="btn btn-info">
+            <a href="/point/{{_id}}/edit" class="btn btn-info">
               Edit
             </a>
           </td>
@@ -45,7 +41,7 @@
 {{else}}
   <div class="h-100 d-flex align-items-center justify-content-center">
     <div class="text-center text-white">
-      <h1>No Products</h1>
+      <h1>No hay puntuaciones</h1>
       <img src="/icons/empty.svg" class="w-75" />
     </div>
 

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h1>Actualizar Datos</h1>
+
+          <form action="/empleados/{{point._id}}/edit" method="post">
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="username"
+                placeholder="Username"
+                value="{{point.username}}"
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                name="description"
+                rows="3"
+                placeholder="Add a description"
+              >{{point.description}}</textarea>
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                name="point"
+                rows="3"
+                placeholder="Add a points"
+              >{{point.point}}</textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

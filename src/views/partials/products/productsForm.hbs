@@ -1,4 +1,4 @@
-<div class="card card-body p-4 rounded-0 bg-dark text-white">
+{{!-- <div class="card card-body p-4 rounded-0 bg-dark text-white">
   <h3>Añadir A Producto</h3>
   <form action="/products/add" method="post">
 
@@ -56,4 +56,82 @@
 
     <button class="btn btn-primary" type="submit">Add</button>
   </form>
+</div> --}}
+
+
+
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h3>Añadir A Producto</h3>
+
+
+<form action="/products/add" method="post" class="row g-3">
+
+  <div class="col-auto">
+      <label for="productName">Write a productName</label>
+      <input
+        id="productName"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="productName"
+        placeholder="productName"
+        
+      />
+  </div>
+
+  <div class="col-auto">
+      <label for="productImage">productImage</label>
+        <input
+            id="productImage"
+            class="form-control rounded-0 bg-dark text-white"
+            type="text"
+            name="productImage"
+            placeholder="productImage"
+            
+        />
+  </div>
+
+    <div class="col-auto">
+      <label for="points">points</label>
+        <input
+            id="points"
+            class="form-control rounded-0 bg-dark text-white"
+            type="text"
+            name="points"
+            placeholder="points"
+           
+        />
+  </div>
+    <div class="col-auto">
+      <label for="category">category</label>
+        <input
+            id="category"
+            class="form-control rounded-0 bg-dark text-white"
+            type="text"
+            name="category"
+            placeholder="category"
+           
+        />
+  </div>
+
+  <div class="col ml-3">
+      <label for="description">Description</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="description"
+        cols="30"
+        placeholder="Add a Description"
+      ></textarea>
+  </div>
+
+    {{!-- <div class="col mt-5">
+    <button type="submit" class="btn btn-primary mb-3">Add</button>
+  </div> --}}
+
+   <button class="btn btn-primary" type="submit">Add</button>
+
+
+
+
+</form>
+
 </div>

@@ -1,24 +1,25 @@
 const {Schema, model} = require('mongoose')
 
-const pointSchema = Schema({
+const notificationSchema = Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
     username: {
         type: String,
         required: true,
         unique: true,
         trim: true
     },
-    description: {
-        type: String,
-        required: true
-    },
-    point: {
-        type: String,
-        required: true
-    },
+
 
 }, {
     timestamps: true,
     versionKey: false
 })
 
-module.exports = model('Point', pointSchema)
+module.exports = model('Notification', notificationSchema)

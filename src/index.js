@@ -2,7 +2,10 @@ const app = require('./app')
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const port = process.env.PORT || 8080;
+// const keycloak = require('./config/keycloak-config').initKeycloak()
+// app.use(keycloak.middleware()) 
+
+const port = process.env.PORT || 3030;
 
 app.listen(port, () => console.log("server listening on port", port));
 

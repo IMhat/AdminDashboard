@@ -2,6 +2,7 @@ const express = require('express')
 const { engine } = require("express-handlebars");
 const taskRoutes = require('./routes/task.routes')
 const pointRoutes = require('./routes/point.routes')
+const notificationRoutes = require('./routes/notification.routes')
 const productRoutes = require('./routes/product.routes')
 const empleadosRoutes = require('./routes/empleados.routes')
 const indexRoutes = require('./routes/index.routes')
@@ -32,6 +33,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(indexRoutes);
 app.use(taskRoutes);
 app.use(pointRoutes);
+app.use(notificationRoutes);
 app.use(empleadosRoutes);
 app.use(productRoutes);
 

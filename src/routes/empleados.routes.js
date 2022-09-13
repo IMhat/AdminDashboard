@@ -1,5 +1,6 @@
 const express = require('express')
 const Empleados = require('../models/Empleados')
+// const keycloak = require('../config/keycloak-config').getKeycloak()
 
 const {renderEmpleados, createEmpleado, renderEmpleadoEdit, editEmpleado, deleteEmpleado} = require('../controllers/empleados.controller')
 
@@ -11,7 +12,7 @@ const router = express.Router()
 
 router.get('/empleados', renderEmpleados);
 
-router.post('/empleados/add', createEmpleado);
+router.post('/empleados/add',createEmpleado);
 
 
 router.get('/empleados/:id/edit', renderEmpleadoEdit);

@@ -1,6 +1,8 @@
 const express = require('express')
 const Task = require('../models/Task')
 
+
+
 const renderTask = async (req, res) =>{
 
     const tasks = await Task.find().lean();
@@ -61,6 +63,19 @@ const taskToggleDone = async (req, res) =>{
     const task = await Task.findById(id)
 
     task.done = !task.done;
+
+    while (task.done = done){
+
+        function createPoint(req, res){
+
+            const points = Point(req.body)
+         
+            points.save()
+         }
+         createPoint();
+
+
+    };
 
     await task.save();
 

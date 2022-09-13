@@ -1,5 +1,7 @@
 const express = require('express')
 const Task = require('../models/Task')
+// const keycloak = require('../config/keycloak-config').getKeycloak()
+
 const {renderTask, createTask, renderTaskEdit, editTask, deleteTask, taskToggleDone} = require('../controllers/task.controller')
 
 
@@ -12,20 +14,20 @@ const router = express.Router()
 
 
 
-router.get('/task', renderTask);
+router.get('/task',  renderTask);
 
-router.post('/tasks/add', createTask);
-
-
-router.get('/tasks/:id/edit', renderTaskEdit);
+router.post('/tasks/add',  createTask);
 
 
-router.post('/tasks/:id/edit', editTask)
+router.get('/tasks/:id/edit',  renderTaskEdit);
 
 
-router.get('/tasks/:id/delete', deleteTask)
+router.post('/tasks/:id/edit',  editTask)
 
 
-router.get('/tasks/:id/toggleDone', taskToggleDone )
+router.get('/tasks/:id/delete',  deleteTask)
+
+
+router.get('/tasks/:id/toggleDone',  taskToggleDone )
 
 module.exports = router;

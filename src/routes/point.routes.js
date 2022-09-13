@@ -1,7 +1,9 @@
 const express = require('express')
 const Point = require('../models/Point')
 
-const {renderPoint} = require('../controllers/point.controller')
+// const keycloak = require('../config/keycloak-config').getKeycloak()
+
+const {renderPoint, createPoint, renderPointEdit, editPoint, deletePoint } = require('../controllers/point.controller')
 
 
 const router = express.Router()
@@ -9,18 +11,18 @@ const router = express.Router()
 
 
 
-router.get('/point', renderPoint);
+router.get('/point',  renderPoint);
 
-// router.post('/point/add', createTask);
-
-
-// router.get('/point/:id/edit', renderTaskEdit);
+router.post('/point/add',  createPoint);
 
 
-// router.post('/point/:id/edit', editTask)
+router.get('/point/:id/edit',  renderPointEdit);
 
 
-// router.get('/point/:id/delete', deleteTask)
+router.post('/point/:id/edit', editPoint);
+
+
+router.get('/point/:id/delete',  deletePoint)
 
 
 // router.get('/point/:id/toggleDone', taskToggleDone )

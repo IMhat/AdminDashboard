@@ -17,6 +17,10 @@ const productSchema = Schema({
         type: String,
         required: true
     },
+    category: {
+        type: String,
+        required: true
+    },
     points: {
         type: String,
         required: true

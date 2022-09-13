@@ -1,5 +1,6 @@
 const express = require('express')
 const Product = require('../models/Product')
+// const keycloak = require('../config/keycloak-config').getKeycloak()
 
 const {renderProduct, createProduct, renderProductEdit, editProduct, deleteProduct} = require('../controllers/product.controller')
 
@@ -9,18 +10,18 @@ const router = express.Router()
 
 
 
-router.get('/products', renderProduct);
+router.get('/products',  renderProduct);
 
-router.post('/products/add', createProduct);
-
-
-router.get('/products/:id/edit', renderProductEdit);
+router.post('/products/add',  createProduct);
 
 
-router.post('/products/:id/edit', editProduct)
+router.get('/products/:id/edit',  renderProductEdit);
 
 
-router.get('/products/:id/delete', deleteProduct)
+router.post('/products/:id/edit',  editProduct)
+
+
+router.get('/products/:id/delete',  deleteProduct)
 
 
 // router.get('/point/:id/toggleDone', taskToggleDone )

@@ -30,7 +30,7 @@ const renderProductEdit = async (req, res) =>{
     try {
         const product = await Product.findById(req.params.id).lean();
 
-        res.render("editProduct", {product: product});
+        res.render("editProducts", {product: product});
     } catch (error) {
         console.log(error.message)
     }

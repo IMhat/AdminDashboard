@@ -1,12 +1,10 @@
-
-
 <div class="card card-body p-4 rounded-0 bg-dark text-white">
-  <h3>Add A empleado</h3>
+  <h3>Añadir puntuaciones </h3>
   
 
 
-<form action="/empleados/add" method="post" class="row g-3">
-  
+<form action="/point/add" method="post" class="row g-3">
+  <form action="/point/add" method="post">
 
    <div class="col-auto">
       <label for="username">Write a username </label>
@@ -21,13 +19,24 @@
   </div>
 
   <div class="col-auto">
-      <label for="email">Email</label>
+      <label for="description">Description</label>
         <input
-            id="email"
+            id="description"
             class="form-control rounded-0 bg-dark text-white"
             type="text"
-            name="email"
-            placeholder="email"
+            name="description"
+            placeholder="description"
+            autofocus
+        />
+  </div>
+  <div class="col-auto">
+      <label for="point">Puntos</label>
+        <input
+            id="point"
+            class="form-control rounded-0 bg-dark text-white"
+            type="text"
+            name="point"
+            placeholder="puntos"
             autofocus
         />
   </div>
